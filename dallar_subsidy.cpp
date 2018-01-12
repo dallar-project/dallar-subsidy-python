@@ -1,7 +1,8 @@
 #include <Python.h>
+#include <stdint.h>
 
 static const int64_t COIN = 100000000;
-static const int64_t minimumSubsidy = 8.0 * COIN;
+static const int64_t minimumSubsidy = 8 * COIN;
 static const int64_t nPremine = 200000 * COIN;
 
 int64_t static GetBlockBaseValue(int nHeight)
