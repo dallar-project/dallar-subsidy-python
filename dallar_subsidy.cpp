@@ -1,5 +1,10 @@
 #include <Python.h>
-#include <stdint.h>
+
+#ifdef _MSC_VER
+    typedef __int64 int64_t;
+#else
+    #include <stdint.h>
+#endif
 
 static const int64_t COIN = 100000000;
 static const int64_t minimumSubsidy = 8 * COIN;
